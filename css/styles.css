@@ -136,9 +136,14 @@ nav h1 a {
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
-  display: flex;
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    justify-content: center;
+    align-items: center;
+  /*display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center;*/
   text-align: center;
 }
 #restaurants-list li {
