@@ -1,7 +1,5 @@
 #restaurants-list {
         
-    margin: 0;
-    padding: 30px 15px 60px;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
