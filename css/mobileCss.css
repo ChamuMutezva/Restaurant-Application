@@ -1,8 +1,65 @@
+
+body {
+     display: grid;
+    grid-template-columns: 1fr;
+}
+
+.inside #map-container {
+       height: 35%;
+        width: 100%;
+}
+
+.inside #footer {
+     position: fixed;
+    width: 100%;
+}
+
+#footer {
+    z-index: 100;
+ }
+ 
 #restaurants-list {
-        
+      
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+#restaurant-container, #reviews-container {
+    
+    padding: 340px 30px 40px 30px;
+    width: 100%;
+}
+#reviews-container {
+    padding: 30px 10px 80px;
+}
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    margin-top: 90px;
+}
+#restaurant-name {
+    
+    text-align: center;
+}
+#maincontent {
+    
+    min-height: 80%;
+    margin-bottom: -100px;
+    /* height: 20%; */
+}
+#footer {
+   
+    padding: 25px 4px 25px 4px;
+   
+}
+.inside #footer {
+   
+    width: 100%;
+   
+}
+#restaurant-img {
+    width: 100%;
+}
+
