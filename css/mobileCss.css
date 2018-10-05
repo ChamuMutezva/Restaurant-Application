@@ -26,11 +26,17 @@ body {
     align-items: center;
     text-align: center;
 }
+#reviews-list li {
+  
+  position: initial;
+  width: 85%;
+}
 #restaurant-container, #reviews-container {
     
     padding: 340px 30px 40px 30px;
     width: 100%;
 }
+
 #reviews-container {
     padding: 30px 10px 80px;
 }
