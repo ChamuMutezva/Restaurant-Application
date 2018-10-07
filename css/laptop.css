@@ -4,7 +4,7 @@ body {
 }
 
 .inside #map-container {
-       height: 45%;
+       height: 35%;
         width: 100%;
 }
 
@@ -32,8 +32,8 @@ body {
 }
 
 #restaurant-container {
-    
-    padding: 400px 30px 40px 30px;
+    margin-top: 20px;
+    padding: 310px 0 40px 0;
     width: 100%;
     text-align: center;
 }
@@ -42,13 +42,16 @@ body {
     padding: 30px 10px 80px;
     text-align: center;
 }
+#restaurants-list li {
+        margin: 10px 0 10px 0;
+   }
 /*.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
     border: 2px solid rgba(0,0,0,0.2);
     background-clip: padding-box;
     margin-top: 90px;
 }*/
 #restaurant-name {
-    
+    margin-bottom: 4px;
     text-align: center;
 }
 #maincontent {
@@ -72,9 +75,15 @@ body {
        text-align: center;
 }
 #restaurant-img {
-    width: 100%;
+    width: 80%;
 }
 #restaurant-cuisine {
         width: 100%;
 }
+nav h1 a {
+        letter-spacing: 5px;
+    }
+nav {
+        height: 45px;
+    }
 

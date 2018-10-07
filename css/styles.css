@@ -51,7 +51,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
-  height: 80px;
+  height: 45px;
   background-color: #252831;
   text-align:center;
 }
@@ -71,7 +71,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -136,21 +136,20 @@ nav h1 a {
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
-  display: grid;
+   display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 30px;
     justify-content: center;
     align-items: center;
-  /*display: flex;
-  flex-direction: row;
-  justify-content: center;*/
+  
   text-align: center;
+
 }
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 5px auto;
+  margin: 15px;
   min-height: 380px;
   padding: 0 30px 25px;
   text-align: left;
@@ -201,11 +200,12 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
+  height: 78%;
   position: fixed;
   right: 0;
   top: 80px;
   width: 50%;
+  maegin-right: 5px;
 }
 .inside #map {
   background-color: #ccc;
@@ -214,7 +214,7 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 #restaurant-name {
@@ -249,11 +249,15 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 30px 2% 80px 2%;
+  padding: 140px 40px 30px;
   width: 50%;
 }
+#restaurant-container{
+  padding: 90px 10px 10px 10px;
+}
 #reviews-container {
- /* padding: 30px 5px 80px 5px;*/
+  padding: 10px 10px 80px 5px;
+ /* padding: 30px 40px 80px;*/
 }
 #reviews-container h2 {
   color: #f58500;
@@ -265,7 +269,6 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
-  width: 95%;
 }
 #reviews-list li {
   background-color: #fff;
