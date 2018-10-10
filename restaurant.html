@@ -34,14 +34,14 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent">
+  <main id="maincontent" tabindex="3">
     <!-- Beginning map -->
-    <section tabindex="5" id="map-container">
+    <section tabindex="6" id="map-container" aria-label="Map area" role="application">
       <div id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section tabindex="3" id="restaurant-container">
+<section id="restaurant-container" tabindex="4" aria-label="Restaurant Information">
       <h1 id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
@@ -50,7 +50,7 @@
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section tabindex="4" id="reviews-container">
+<section id="reviews-container" tabindex="5" aria-label="Reviews">
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
@@ -58,7 +58,7 @@
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer id="footer">
+  <footer id="footer" tabindex="7">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->

@@ -36,7 +36,7 @@ self.addEventListener('fetch', function (event) {
 		caches.match(event.request)
 		.then(function (response) {
 			if (response) {
-				//	console.log('Found', e.request, ' in cache');
+			
 				return response;
 			}
 			var fetchRequest = event.request.clone();
