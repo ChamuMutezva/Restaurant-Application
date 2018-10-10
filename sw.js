@@ -35,29 +35,29 @@ self.addEventListener('fetch', function (event) {
 	event.respondWith(
 		caches.match(event.request)
 		.then(function (response) {
-			if (response) {
-			
-				return response;
-			}
-			var fetchRequest = event.request.clone();
 
-			return fetch(fetchRequest).then(
-				function(response){
-					//check if a valid response has been received
-					if(!response || response.status !== 200 || response.type !== 'basic'){
-						return response;
-					}
-					var responseToCache = response.clone();
+			return response || fetch(event.request);
 
-					caches.open(CACHE_NAME)
-					.then(function(cache){
-						cache.put(event.request, responseToCache);
-					});
-					return response;
-				}
-			);
-			//return fetch(event.request);
+
 		})
 	);
 
 });
+
+self.addEventListener('activate', function (event) {
+	event.waitUntil(
+		caches.keys()
+			.then(function (cacheNames) {
+				return Promise.all(
+					cacheNames.filter(function (cacheName) {
+						return cacheName.startsWith('restaurant-') &&
+							cacheName != CACHE_NAME;
+					}).map(function (cacheName) {
+						return caches.delete(cacheName);
+					})
+				);
+			})
+	);
+});
+
+
