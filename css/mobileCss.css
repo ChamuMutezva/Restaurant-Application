@@ -1,3 +1,5 @@
+/*The coding in this file caters for small devices (smart phones)
+*/
 body {
      display: grid;
     grid-template-columns: 1fr;
