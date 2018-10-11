@@ -2,7 +2,7 @@
 ## Restaurant Review Application
 ---
 
-The  **Restaurant Reviews** project is a web responsive application that displays in various display sizes and also accessible. It also uses webworker to be able to cache pages that can be viewed offline. you will incrementally convert a static webpage to a mobile-ready web application. 
+The  **Restaurant Reviews** project is a web responsive application that displays in various display sizes and also accessible. It also uses webworker to be able to cache pages that can be viewed offline. 
 
 ### Requirements
 
