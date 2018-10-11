@@ -2,7 +2,7 @@
 ## Restaurant Review Application
 ---
 
-The  **Restaurant Reviews** project is a web responsive application that displays in various display sizes and also accessible. It also uses webworker to be able to cache pages that can be viewed offline. you will incrementally convert a static webpage to a mobile-ready web application. 
+The  **Restaurant Reviews** project is a web responsive application that displays in various display sizes and also accessible. It also uses webworker to be able to cache pages that can be viewed offline. 
 
 ### Requirements
 
@@ -10,7 +10,7 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 
 ## How to run the application
 
-1. Download the application at `https://github.com/ChamuMutezva/Restaurant-Application.git`.
+1. Download the application at https://github.com/ChamuMutezva/Restaurant-Application.git.
 2. Using command prompt(cmd), cd into the directory housing your project files. You can also go direct into the folder and right click anywhere and select 'Git bash here'.
 3. For python 3 type 'py -m http.server 8000'.
 
