@@ -7,12 +7,12 @@ self.addEventListener('Install', function (event) {
 			return cache.addAll([
 				'./',
 				'./index.html',
-				'./restaurant.html',
+				'/restaurant.html',
 				'./css/styles.css',
 				'./css/mobileCss.css',
 				'./css/laptop.css',
 				'./js/dbhelper.js',
-				'.data/restaurant.json',
+				'./data/restaurant.json',
 				'./js/main.js',
 				'./js/restaurant_info.js',
 				'/js/sw_register.js',
@@ -24,11 +24,13 @@ self.addEventListener('Install', function (event) {
 				'./img/6.jpg',
 				'./img/7.jpg',
 				'./img/8.jpg',
+				'./img/9.jpg',
 				'./img/10.jpg'
 
 			], {
 				mode: 'no-cors'
 			});
+			console.log('Items cached successfully');
 		})
 	);
 });
@@ -49,9 +51,11 @@ self.addEventListener('activate', function (event) {
 	);
 });
 
+/*
+
 self.addEventListener('fetch', function (event) {
 	event.respondWith(
-		caches.match(event.request)
+		caches.match(event.request, {ignoreSearch: "true"})
 		.then(function (response) {
 			if (response) {
 				return response;
@@ -63,4 +67,20 @@ self.addEventListener('fetch', function (event) {
 	);
 
 });
+*/
 
+self.addEventListener('fetch', function (event) {
+	// We only want to call event.respondWith() if this is a GET request for an HTML document.
+	if (event.request.method === 'GET' &&
+		event.request.headers.get('accept').indexOf('text/html') !== -1) {
+		console.log('Handling fetch event for', event.request.url);
+		event.respondWith(
+			fetch(event.request).catch(function (e) {
+				console.error('Fetch failed; returning offline page instead.', e);
+				return caches.open(OFFLINE_CACHE).then(function (cache) {
+					return cache.match(OFFLINE_URL);
+				});
+			})
+		);
+	}
+});
