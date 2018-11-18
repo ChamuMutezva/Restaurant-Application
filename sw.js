@@ -1,4 +1,3 @@
-
 console.log("Service worker: registered");
 let CACHE_NAME = 'restaurant-v1';
 
@@ -29,7 +28,7 @@ self.addEventListener('Install', function (event) {
 				'./img/10.jpg'
 
 			]);
-			
+
 		})
 	);
 });
@@ -37,16 +36,16 @@ self.addEventListener('Install', function (event) {
 self.addEventListener('activate', function (event) {
 	event.waitUntil(
 		caches.keys()
-			.then(function (cacheNames) {
-				return Promise.all(
-					cacheNames.filter(function (cacheName) {
-						return cacheName.startsWith('restaurant-') &&
-							cacheName != CACHE_NAME;
-					}).map(function (cacheName) {
-						return caches.delete(cacheName);
-					})
-				);
-			})
+		.then(function (cacheNames) {
+			return Promise.all(
+				cacheNames.filter(function (cacheName) {
+					return cacheName.startsWith('restaurant-') &&
+						cacheName != CACHE_NAME;
+				}).map(function (cacheName) {
+					return caches.delete(cacheName);
+				})
+			);
+		})
 	);
 });
 
