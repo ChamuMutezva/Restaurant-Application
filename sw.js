@@ -50,7 +50,7 @@ self.addEventListener('activate', function (event) {
 });
 
 
-
+/*
 self.addEventListener('fetch', function (event) {
 	event.respondWith(
 		caches.match(event.request)
@@ -59,9 +59,9 @@ self.addEventListener('fetch', function (event) {
 		})
 	);
 
-});
+});*/
 
-/*
+
 self.addEventListener('fetch', function (event) {
 	// We only want to call event.respondWith() if this is a GET request for an HTML document.
 	if (event.request.method === 'GET' &&
@@ -76,4 +76,4 @@ self.addEventListener('fetch', function (event) {
 			})
 		);
 	}
-});*/
+});
