@@ -1,3 +1,4 @@
+
 console.log("Service worker: registered");
 let CACHE_NAME = 'restaurant-v1';
 
@@ -27,10 +28,8 @@ self.addEventListener('Install', function (event) {
 				'./img/9.jpg',
 				'./img/10.jpg'
 
-			], {
-				mode: 'no-cors'
-			});
-			console.log('Items cached successfully');
+			]);
+			
 		})
 	);
 });
@@ -51,24 +50,19 @@ self.addEventListener('activate', function (event) {
 	);
 });
 
-/*
+
 
 self.addEventListener('fetch', function (event) {
 	event.respondWith(
-		caches.match(event.request, {ignoreSearch: "true"})
+		caches.match(event.request)
 		.then(function (response) {
-			if (response) {
-				return response;
-			}
-			return fetch(event.request);
-
-
+			return response || fetch(event.request);
 		})
 	);
 
 });
-*/
 
+/*
 self.addEventListener('fetch', function (event) {
 	// We only want to call event.respondWith() if this is a GET request for an HTML document.
 	if (event.request.method === 'GET' &&
@@ -83,4 +77,4 @@ self.addEventListener('fetch', function (event) {
 			})
 		);
 	}
-});
+});*/
